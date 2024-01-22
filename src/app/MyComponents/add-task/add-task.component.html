@@ -1,0 +1,7 @@
+<h1 class="heading">TodoApp</h1>
+<!-- add-task.component.html -->
+<mat-form-field class="example-full-width">
+  <input matInput placeholder="Add Tasks" [(ngModel)]="newTask" />
+</mat-form-field>
+
+<button mat-fab extended color="primary" (click)="addTask()">Add task</button>

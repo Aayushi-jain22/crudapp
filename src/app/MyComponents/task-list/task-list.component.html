@@ -1,0 +1,82 @@
+<!-- task-list.component.html -->
+<!-- <table class="task-table">
+  <thead>
+    <tr>
+      <th>All tasks</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let task of tasks; let i = index">
+      <td>{{ task.id }}</td>
+      <td>
+        <div
+          *ngIf="!task.editMode; else editModeTemplate"
+          [style.textDecoration]="task.completed ? 'line-through' : 'none'"
+        >
+          {{ task.title }}
+        </div> -->
+<!-- <ng-container #editMode>
+          <input matInput [(ngModel)]="task.title" />
+          <button mat-stroked-button color="primary" (click)="saveTask(i)">
+            Save
+          </button>
+        </ng-container> -->
+<!-- <ng-template #editModeTemplate>
+          <input matInput [(ngModel)]="task.title" />
+          <button mat-stroked-button color="primary" (click)="saveTask(i)">
+            Save
+          </button>
+        </ng-template>
+      </td>
+
+      <td>
+        <button mat-stroked-button color="accent" (click)="toggleEditMode(i)">
+          {{ task.editMode ? "Cancel" : "Edit" }}
+        </button>
+        <button mat-stroked-button color="warn" (click)="deleteTask(i)">
+          Delete
+        </button>
+        <button mat-stroked-button color="primary" (click)="markCompleted(i)">
+          {{ task.completed ? "Mark Incomplete" : "Mark Completed" }}
+        </button>
+      </td>
+    </tr>
+  </tbody>
+</table> -->
+
+<!-- <td>
+          <input type="checkbox" [(ngModel)]="task.completed" />
+        </td> -->
+<table class="task-table">
+  <!-- ... (unchanged) ... -->
+  <tbody>
+    <tr *ngFor="let task of tasks; let i = index">
+      <td>{{ task.id }}</td>
+      <td>
+        <div
+          *ngIf="!task.editMode; else editModeTemplate"
+          [style.textDecoration]="task.completed ? 'line-through' : 'none'"
+        >
+          {{ task.title }}
+        </div>
+        <ng-template #editModeTemplate>
+          <input matInput [(ngModel)]="task.title" />
+          <button mat-stroked-button color="primary" (click)="saveTask(i)">
+            Save
+          </button>
+        </ng-template>
+      </td>
+      <td class="task-actions">
+        <button mat-stroked-button color="accent" (click)="toggleEditMode(i)">
+          {{ task.editMode ? "Cancel" : "Edit" }}
+        </button>
+        <button mat-stroked-button color="warn" (click)="deleteTask(i)">
+          Delete
+        </button>
+        <button mat-stroked-button color="primary" (click)="markCompleted(i)">
+          {{ task.completed ? "Mark Incomplete" : "Mark Completed" }}
+        </button>
+      </td>
+    </tr>
+  </tbody>
+</table>

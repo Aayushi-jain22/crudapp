@@ -1,0 +1,30 @@
+.task-table {
+  width: 100%; /* Ensure the table takes the full width */
+  text-align: center;
+}
+
+.task-table td {
+  position: relative; /* Enable positioning for child elements */
+}
+
+.task-actions {
+  position: absolute;
+  right: 0;
+  top: 0; /* Align to the top of the parent container */
+  height: 100%; /* Take full height of the parent container */
+  display: flex;
+  align-items: center; /* Align buttons vertically in the middle */
+}
+
+.task-actions button {
+  margin-left: 5px;
+}
+
+/* Media query for screens smaller than 600px (adjust as needed) */
+@media (max-width: 600px) {
+  .task-actions {
+    position: static;
+    display: block;
+    margin-top: 10px;
+  }
+}

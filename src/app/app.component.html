@@ -1,0 +1,4 @@
+<!-- app.component.html -->
+<!-- <h2 class="app-todo">Todo App</h2> -->
+<app-add-task (taskAdded)="addTask($event)"></app-add-task>
+<app-task-list [tasks]="tasks"></app-task-list>
