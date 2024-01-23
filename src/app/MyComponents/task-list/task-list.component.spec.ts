@@ -31,7 +31,7 @@ import { TaskListComponent } from './task-list.component';
 import { TodoService } from '../../services/todo.service';
 import { of } from 'rxjs';
 
-fdescribe('TaskListComponent', () => {
+describe('TaskListComponent', () => {
   let component: TaskListComponent;
   let fixture: ComponentFixture<TaskListComponent>;
   let todoService: jasmine.SpyObj<TodoService>;
